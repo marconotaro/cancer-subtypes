@@ -657,9 +657,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  res <span class="op">=</span> <span class="fl">100</span>,</span>
 <span>  nframes <span class="op">=</span> <span class="fl">300</span>,</span>
 <span>  fps <span class="op">=</span> <span class="fl">30</span>,</span>
-<span>  device <span class="op">=</span> <span class="st">"ragg_png"</span><span class="co">#,</span></span>
-<span>  <span class="co"># renderer = gifski_renderer(file = "tsne-clusters.gif")</span></span>
+<span>  device <span class="op">=</span> <span class="st">"ragg_png"</span>,</span>
+<span>  renderer <span class="op">=</span> <span class="fu">gifski_renderer</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="r2_clustering_files/figure-html/unnamed-chunk-18-1.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 <p>When specifically coloring patients based on ER status, we observe that the expression profiles of ER- patients cluster well. Furthermore, it is worth noting that the status of some patients within this cluster is unknown (gray patients). These might be considered as ER- patients since they cluster strongly with patients annotated as ER-.</p>
 <div class="cell">
@@ -675,9 +681,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  res <span class="op">=</span> <span class="fl">100</span>,</span>
 <span>  nframes <span class="op">=</span> <span class="fl">300</span>,</span>
 <span>  fps <span class="op">=</span> <span class="fl">30</span>,</span>
-<span>  device <span class="op">=</span> <span class="st">"ragg_png"</span><span class="co">#,</span></span>
-<span>  <span class="co">#renderer = gifski_renderer(file = "tsne-erstatus.gif")</span></span>
+<span>  device <span class="op">=</span> <span class="st">"ragg_png"</span>,</span>
+<span>  renderer <span class="op">=</span> <span class="fu">gifski_renderer</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="r2_clustering_files/figure-html/unnamed-chunk-19-1.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 </section></section><section id="conclusions" class="level2"><h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
 <p>I identified breast cancer subtypes based on gene expression data via a graph-based approach. Two main distinct clusters of patients are detected. The smaller cluster is enriched for ER- patients and likely represent the most aggressive expression profile (basal PAM50 subtype, e.g.&nbsp;G3, PgR-, ER-, HER-).</p>
@@ -1646,8 +1658,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-543"><a href="#cb18-543" aria-hidden="true" tabindex="-1"></a>  <span class="at">res =</span> <span class="dv">100</span>,</span>
 <span id="cb18-544"><a href="#cb18-544" aria-hidden="true" tabindex="-1"></a>  <span class="at">nframes =</span> <span class="dv">300</span>,</span>
 <span id="cb18-545"><a href="#cb18-545" aria-hidden="true" tabindex="-1"></a>  <span class="at">fps =</span> <span class="dv">30</span>,</span>
-<span id="cb18-546"><a href="#cb18-546" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"ragg_png"</span><span class="co">#,</span></span>
-<span id="cb18-547"><a href="#cb18-547" aria-hidden="true" tabindex="-1"></a>  <span class="co"># renderer = gifski_renderer(file = "tsne-clusters.gif")</span></span>
+<span id="cb18-546"><a href="#cb18-546" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"ragg_png"</span>,</span>
+<span id="cb18-547"><a href="#cb18-547" aria-hidden="true" tabindex="-1"></a>  <span class="at">renderer =</span> <span class="fu">gifski_renderer</span>()</span>
 <span id="cb18-548"><a href="#cb18-548" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb18-549"><a href="#cb18-549" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb18-550"><a href="#cb18-550" aria-hidden="true" tabindex="-1"></a></span>
@@ -1669,8 +1681,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb18-568"><a href="#cb18-568" aria-hidden="true" tabindex="-1"></a>  <span class="at">res =</span> <span class="dv">100</span>,</span>
 <span id="cb18-569"><a href="#cb18-569" aria-hidden="true" tabindex="-1"></a>  <span class="at">nframes =</span> <span class="dv">300</span>,</span>
 <span id="cb18-570"><a href="#cb18-570" aria-hidden="true" tabindex="-1"></a>  <span class="at">fps =</span> <span class="dv">30</span>,</span>
-<span id="cb18-571"><a href="#cb18-571" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"ragg_png"</span><span class="co">#,</span></span>
-<span id="cb18-572"><a href="#cb18-572" aria-hidden="true" tabindex="-1"></a>  <span class="co">#renderer = gifski_renderer(file = "tsne-erstatus.gif")</span></span>
+<span id="cb18-571"><a href="#cb18-571" aria-hidden="true" tabindex="-1"></a>  <span class="at">device =</span> <span class="st">"ragg_png"</span>,</span>
+<span id="cb18-572"><a href="#cb18-572" aria-hidden="true" tabindex="-1"></a>  <span class="at">renderer =</span> <span class="fu">gifski_renderer</span>()</span>
 <span id="cb18-573"><a href="#cb18-573" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb18-574"><a href="#cb18-574" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb18-575"><a href="#cb18-575" aria-hidden="true" tabindex="-1"></a></span>
